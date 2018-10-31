@@ -1,0 +1,40 @@
+<nav class="navbar navbar" id="navbar_c">
+    <a class="navbar-brand text-white" id="pqr_title">PQRSF</a>
+    <div>
+        <i class="fa fa-user fa-2x p-2 pointer" ng-click="usuarios()"></i>
+        <i class="fa fa-envelope fa-2x p-2 pointer" ng-click="notificaciones()"></i>
+        <a class="navbar-brand text-white p-2 pointer" ng-click="reportes()" id="pqr_title">Reportes</a>
+        <i class="fa fa-power-off fa-2x text-danger pointer" ng-click="cerrar()"></i>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-5">
+            <div class="card cardreportes">
+                <div class="card-header">
+                    <select ng-model="dependenciaid" ng-change="select()">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="{{dependencias.id}}" ng-repeat="dependencias in dependencias">{{dependencias.nombre}}</option>
+                    </select>
+                    <select ng-model="tipoid" ng-change="select()">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="{{tipos.id}}" ng-repeat="tipos in tipos">{{tipos.nombre}}</option>
+                    </select>
+                </div>
+                <div class="card-body">
+                    <div class="d-flex justify-content-center">
+                        <h5>
+                            Título Gráfico
+                            <span class="badge badge-info">{{}}</span>
+                        </h5>
+                    </div>
+                    <canvas id="myChart" width="300" class="canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-end mt-2">
+        <button class="btn btn-danger ml-1" ng-click="downloadPdf()">Exportar a PDF</button>
+        <button class="btn btn-success ml-1" ng-click="downloadExcel()">Exportar a Excel</button>
+    </div>
+</div>

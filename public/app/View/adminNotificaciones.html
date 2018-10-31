@@ -1,0 +1,36 @@
+<nav class="navbar navbar" id="navbar_c">
+        <a class="navbar-brand text-white" id="pqr_title">PQRSF</a>
+        <div>
+            <i class="fa fa-user fa-2x p-2 pointer" ng-click="usuarios()"></i>
+            <i class="fa fa-envelope fa-2x p-2 pointer" ng-click="notificaciones()"></i>
+            <a class="navbar-brand text-white p-2 pointer" ng-click="reportes()" id="pqr_title">Reportes</a>
+            <i class="fa fa-power-off fa-2x text-danger pointer" ng-click="cerrar()"></i>        
+        </div>
+    </nav>
+    <div class="text-center p-2 pointer">
+        <h3>Notificaciones</h3>
+    </div>
+    <div class="container d-flex justify-content-center">
+        <div class="table-responsive" id="over">
+            <table class="table" id="tablaAdmin">
+                <thead id="navbar_c">
+                    <tr>
+                        <th>No.</th>
+                        <th>Recepcionista</th>
+                        <th>Observación</th>                        
+                        <th>Fecha</th>                        
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="notificacion in notificaciones">
+                    <th>{{notificacion.pqrsf_id}}</th>
+                    <th>{{notificacion.nombre}}</th>
+                    <th>{{notificacion.observacion_recepcion}}</th>                    
+                    <th>{{notificacion.created_at | date}}</th>
+                    <th>
+            <i class="fa fa-trash fa-2x p-2 pointer" ng-click="delete(notificacion.pqrsf_id)"></i>                        
+                    </th>
+                </tbody>
+            </table>
+        </div>
+    </div>

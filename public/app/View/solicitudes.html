@@ -1,0 +1,58 @@
+<nav class="navbar navbar " id="navbar_c">
+	<a class="navbar-brand text-white" id="pqr_title">PQRSF</a>
+	<form class="form-inline my-2-lg-0">
+		<i class="fa fa-power-off fa-2x text-danger" ng-click="cerrar()"></i>
+	</form>
+</nav>
+<div class="container-fluid">
+	<div class="row d-flex justify-content-center">
+		<div class="col-12 col-sm-12 col-xl-6 mt-1">
+			<div class="card" style="height: 80vh;">
+				<div class="card-header">
+					<div class="container">
+						<div class="row">
+							<div class="col-2">
+								<i class="fa fa-arrow-left fa-2x" ng-click="back()"></i>
+							</div>
+							<div class="col-10">
+								<h4 class="text-white">Solicitudes</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="card-body ca-body">
+					<form ng-submit="pqrsf_form()" id="form2">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th scope="row">Titulo</th>
+										<th scope="row">Tipo</th>
+										<th scope="row">Estado</th>
+										<th scope="row">Fecha</th>
+										<th scope="row">Acción</th>
+									</tr>
+								<tbody ng-repeat="data in array">
+									<th scope="row">
+										<p>{{data.titulo}}</p>
+									</th>
+									<th scope="row">
+										<p>{{data.tipo}}</p>
+									</th>
+									<th scope="row">
+										<p>{{data.estado}}</p>
+									</th>
+									<th scope="row">
+										<p>{{data.fecha}}</p>
+									</th>
+									<th scope="row"><i class="fa fa-trash-o fa-2x" ng-click="delete(data.estado, data.id)"></i></th>
+								</tbody>
+								</thead>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

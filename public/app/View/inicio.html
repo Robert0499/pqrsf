@@ -1,0 +1,35 @@
+<nav class="navbar navbar " id="navbar_c">
+	<a class="navbar-brand text-white" id="pqr_title">PQRSF</a>
+</nav>
+<div class="container-fluid">
+	<div class="row d-flex justify-content-center">
+		<div class="col-12 col-sm-12 mt-3 col-xl-6 ingreso">
+			<div class="card">
+				<h4 class="card-title text-center">Login</h4>
+				<div class="card-body">
+					<form ng-submit="login()">
+						<div class="form-row">
+							<div class="form-group col-12 col-sm-12">
+								<label for="">Usuario: </label>
+								<input type="text" class="form-control" ng-model="user.usuario" required>
+							</div>
+							<div class="form-group col-12 col-sm-12">
+								<label for="">Contraseña: </label>
+								<input type="password" class="form-control" ng-model="user.contrasena" required>
+							</div>
+							<div class="form-group col-6 col-sm-12 col-xl-6">
+								<button type="submit" class="btn btn btn-block text-white btn_r">Iniciar Sesión</button>
+							</div>
+							<div class="form-group col-6 col-sm-12 col-xl-6">
+								<button type="button" class="btn btn btn-block text-white btn_r" ng-click="registro()">Registrarse</button>
+							</div>
+
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

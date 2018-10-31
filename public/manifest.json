@@ -1,0 +1,14 @@
+{
+    "short_name": "PQRSF",
+    "name": "ROSITA",
+    "display": "standalone",
+    "orientation": "portrait",
+    "start_url": "index.html",
+    "icons": [
+      {
+        "src": "./app/img/user.png",
+        "type": "image/png",
+        "sizes": "48x48"
+      }
+    ]
+  }

@@ -1,0 +1,27 @@
+#navbar_c,
+.tr_info,
+.btn_r {
+  background: rgb(23, 106, 97);
+}
+#pqr_title {
+  font-family: sans-serif;
+  font-size: 2em;
+}
+#tablaRecep {
+  width: 80%;
+  border: solid;
+  border-width: 1px;
+}
+.tr_info {
+  max-width: 80vw;
+}
+body {
+  overflow: hidden;
+}
+.ca-body {
+  height: 80vh;
+  overflow-y: scroll;
+}
+i {
+  cursor: pointer;
+}

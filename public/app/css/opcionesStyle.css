@@ -1,0 +1,12 @@
+#navbar_c,
+.btn_r,
+.card-header {
+  background: rgb(23, 106, 97);
+}
+#pqr_title {
+  font-family: sans-serif;
+  font-size: 2em;
+}
+i {
+  cursor: pointer;
+}

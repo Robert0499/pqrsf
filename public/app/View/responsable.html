@@ -1,0 +1,85 @@
+<nav class="navbar navbar" id="navbar_c">
+	<a class="navbar-brand text-white" id="pqr_title">Recepcionista</a>
+	<form class="form-inline my-2-lg-0">
+		<i class="fa fa-power-off fa-2x text-danger" ng-click="cerrar()"></i>
+	</form>
+</nav>
+
+<div class="container-fluid">
+	<div class="row d-flex justify-content-center">
+		<div class="col-12 col-sm-12 col-xl-6 mt-1">
+			<div class="card" style="height: 80vh;">
+				<div class="card-body ca-body">
+					<form ng-submit="pqrsf_form()" id="form2">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr class="text-white tr_info">
+										<th scope="row">Titulo</th>
+										<th scope="row">Tipo</th>
+										<th scope="row">Fecha</th>
+										<th scope="row">Acción</th>
+									</tr>
+								<tbody ng-repeat="data in array">
+									<th scope="row">{{data.titulo}}</th>
+									<th scope="row">{{data.tipo}}</th>
+									<th scope="row">{{data.fecha}}</th>
+									<th scope="row"><i class="fa fa-edit fa-2x" ng-click="update(data.id)"></i></th>
+								</tbody>
+								</thead>
+							</table>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="modal" tabindex="-1" role="dialog" id="queja">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title text-center">Queja</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<form ng-submit="reservar()" id="form_rsp">
+						<div class="row">
+							<div class="col-sm-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="row">
+											<div class="col-xl-12 col-sm-12">
+												<label for="">De:</label>
+												<input type="text" class="form-control" readonly value="{{creador}}">
+											</div>
+											<div class="col-xl-12 col-sm-12">
+												<label for="">Asunto: </label>
+												<textarea max-rows="3" class="form-control" readonly>{{asunt}}</textarea>
+											</div>
+											<div class="col-xl-12 col-sm-12">
+												<label for="">Respuesta: </label>
+												<textarea max-rows="3" class="form-control" required ng-model="user.observacion"></textarea>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn btn_r text-white" data-dismiss="modal">Cerrar</button>
+							<button type="submit" class="btn btn btn_r text-white" ng-click="respond()">Responder</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+</div>

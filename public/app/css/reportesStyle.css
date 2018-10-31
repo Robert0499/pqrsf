@@ -1,0 +1,16 @@
+#navbar_c {
+    background: rgb(23, 106, 97);
+  }
+  #pqr_title {
+    font-family: sans-serif;
+    font-size: 2em;
+  }
+  .cardreportes{
+    max-height: 73vh;
+  }
+  .canvas{
+    max-height: 50vh;
+  }
+  .pointer{
+    cursor: pointer;
+}

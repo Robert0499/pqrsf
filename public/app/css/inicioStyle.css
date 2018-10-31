@@ -1,0 +1,15 @@
+#navbar_c,
+.btn_r {
+  background: rgb(23, 106, 97);
+}
+#pqr_title {
+  font-family: sans-serif;
+  font-size: 2em;
+}
+body {
+  background: rgba(192, 192, 192, 0.4);
+  overflow-y: scroll;
+}
+.ingreso {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
